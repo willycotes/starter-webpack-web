@@ -1,0 +1,79 @@
+@import "./functions";
+
+/* stylelint-disable max-nesting-depth */
+@mixin respond-to($breakpoint, $logic: false) {
+  $query: map-get($breakpoints, $breakpoint);
+  @if not $query {
+    @error "No se encuentra el valor de `#{breakpoint}`."
+    + 'Por favor, asegúrate que está definido en el mapa `$breakpoints`.';
+  }
+  @if ($logic) {
+    @media #{$logic} and (min-width: #{$query}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: #{$query}) {
+      @content;
+    }
+  }
+}
+/* stylelint-enable max-nesting-depth */
+
+// event pseudoclass
+@mixin on-event {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+// Colors
+
+// --------------------------------
+
+// define HSL color variable
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
+  #{$color}-h: #{$hue};
+  #{$color}-s: #{$saturation};
+  #{$color}-l: #{$lightness};
+}
+
+@mixin alert($color-border, $background-color) {
+  background-color: #{$background-color};
+  border: 2px solid #{$color-border};
+}
+@mixin button($color) {
+  background-color: var(#{$color});
+  border: var(--border-button) solid;
+  border-color: var(#{$color});
+  box-shadow: var(--box-shadow);
+  color: var(--color-white);
+  @include on-event {
+    background-color: unquote("var(#{$color}-high)");
+    border-color: transparent;
+    color: var(--color-white);
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 var(--border-button) unquote("var(#{$color}-low)");
+    transform: translateY(4px);
+  }
+}
+@mixin button-line($color) {
+  background-color: transparent;
+  border: var(--border-button) solid;
+  border-color: var(#{$color});
+  box-shadow: var(--box-shadow);
+  color: var(#{$color});
+  @include on-event {
+    background-color: var(#{$color});
+    border-color: transparent;
+    color: var(--color-white);
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 var(--border-button) unquote("var(#{$color}-low)");
+    transform: translateY(4px);
+  }
+}

@@ -1,0 +1,80 @@
+<main class="main-content">
+  <h1>Headline 1</h1>
+  <h2>Headline 2</h2>
+  <h2>Headline 3</h2>
+  <h4>Headline 4</h4>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae,
+    architecto quis? Nobis, sit! Nulla voluptatem voluptatibus, quo culpa, odit
+    architecto veniam iste delectus perferendis consequatur et nisi officiis
+    magnam saepe.
+    <a href="#">Enlace</a>
+  </p>
+  <h2>List order</h2>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <section class="button-container">
+    <h2 class="headline text-center">Buttons</h2>
+    <div class="button-wrapper">
+      <button class="button" data-tooltip="test tooltips">Button default</button>
+      <button class="button button--primary">Button primary</button>
+      <button class="button button--secondary">Button secondary</button>
+      <button data-tooltip="test tooltips" class="button button--line-primary">Button line primary</button>
+      <button class="button button--line-secondary">Button line secondary</button>
+      <button class="button" disabled="disabled">Button disabled</button>
+    </section>
+  </div>
+  <div class="button-container">
+    <h2 class="headline text-center">Alert buttons</h2>
+    <div class="button-wrapper">
+      <button class="button button--info">Button info</button>
+      <button class="button button--success">Button success</button>
+      <button class="button button--warning">Button warning</button>
+      <button class="button button--error">Button error</button>
+    </div>
+  </div>
+  <div class="button-group-container">
+    <h2 class="button-group__headline text-center">Buttons group</h2>
+    <div class="button-wrapper">
+      <button class="button">Cancelar</button>
+      <button class="button button--warning">Warning</button>
+    </div>
+  </div>
+  <div class="button-group-container">
+    <h2 class="button-group__headline text-center">Buttons group ctp</h2>
+    <div class="button-wrapper">
+      <button class="button button--line-secondary">Secundary action</button>
+      <button class="button button--primary">Main action</button>
+    </div>
+  </div>
+  <section class="component">
+    <h2 class="component__headline">Component background-color example full size</h2>
+    <form class="component__form" action="#">
+      <input class="component__text-field" type="text" name="text" id="">
+      <input class="button button--primary" type="button" value="send">
+    </form>
+  </section>
+  <section class="tooltips-container">
+    <h2 class="tooltips__headline">Tooltips</h2>
+    <p class="tooltip__label">
+      Tooltip icon info outline: 
+      <span class="tooltip__icon-wrapper" data-tooltip="test tooltip">
+        <svg class="info-outline" data-tooltip="test tooltip"  xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1rem" height="1rem" style="vertical-align:-.125em;" viewBox="0 0 20 20" transform="rotate(360)"><path d="M9 15h2V9H9v6zm1-10c-.5 0-1 .5-1 1s.5 1 1 1 1-.5 1-1-.5-1-1-1zm0-4c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm0 16c-3.9 0-7-3.1-7-7s3.1-7 7-7 7 3.1 7 7-3.1 7-7 7z" fill="#3e3e3e"/></svg>
+      </span>
+    </p>
+    
+  </section>
+  <section class="blockquote-container">
+    <h2>Blockquote</h2>
+    <blockquote class="blockquote">
+      <p class="blockquote__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis officia adipisci eveniet deserunt iusto eum architecto nihil, voluptates accusamus quia, quasi recusandae, culpa quaerat non? Suscipit, officiis sed. Ad, non!</p>
+    </blockquote>
+  </section>
+  
+  <%- include ../components/alerts.ejs  %> 
+  <%- include ../components/accordion.ejs  %> 
+</main>

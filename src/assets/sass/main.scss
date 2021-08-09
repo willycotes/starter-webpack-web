@@ -1,0 +1,33 @@
+// utils
+@import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+
+// base
+@import "./base/reset";
+@import "./base/base";
+@import "./base/helpers";
+@import "./base/typography";
+// components
+@import "./components/buttons";
+@import "./components/alerts";
+@import "./components/tooltips";
+@import "./components/blockquote";
+@import "./components/accordion";
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ubuntu-regular.woff2") format("woff2"),
+    url("../fonts/ubuntu-regular.woff") format("woff");
+}
+
+body {
+  background-color: var(--background-body);
+  font-size: var(--text-size-base);
+  color: var(--color-text);
+}
+img {
+  max-width: 100%;
+}

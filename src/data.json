@@ -1,0 +1,20 @@
+{
+  "siteName": "Website name",
+  "navigation": [
+    {
+      "itemName": "Inicio",
+      "itemUrl": "./",
+      "pageID": "home"
+    },
+    {
+      "itemName": "Nosotros",
+      "itemUrl": "nosotros.html",
+      "pageID": "about"
+    },
+    {
+      "itemName": "Contáctenos",
+      "itemUrl": "contactenos.html",
+      "pageID": "contacts"
+    }
+  ]
+}
